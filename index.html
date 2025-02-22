@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GCET Bus Booking</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo Bar -->
+        <div class="logo-bar">
+          <img src="https://www.gcet.ac.in/assets/img/gcet_img/left_logo.png" alt="CVM Logo">
+          <img src="https://www.gcet.ac.in/assets/img/gcet_img/right_logo.png" alt="GCET Logo">
+        </div>
+        
+        <!-- Header -->
+        <div class="header">
+          <h1>GCET Bus Booking</h1>
+          <p>Smart Campus Transportation</p>
+        </div>
+    
+        <!-- Booking Form Section -->
+        <div class="form-section" id="bookingFormSection">
+          <div class="input-group">
+            <label for="name">Student Name</label>
+            <input type="text" id="name" placeholder="John Doe" required>
+          </div>
+          <div class="input-group">
+            <label for="studentId">Student ID</label>
+            <input type="text" id="studentId" placeholder="GCET2023001" required>
+          </div>
+          <div class="input-group">
+            <label for="branch">Branch Selection</label>
+            <select id="branch" required>
+              <option value="">Select Branch</option>
+              <option value="IT">Information and Technology</option>
+              <option value="ICT">Information Communication and Technology (ICT)</option>
+              <option value="CSE">Computer Science</option>
+            </select>
+          </div>
+          <h3>Select Route:</h3>
+          <div class="route-selector">
+            <div class="route-option">
+              <label>
+                <span>GCET to City Center</span>
+                <input type="radio" name="route" value="GCET to City Center" required>
+              </label>
+            </div>
+            <div class="route-option">
+              <label>
+                <span>GCET to Railway Station</span>
+                <input type="radio" name="route" value="GCET to Railway Station">
+              </label>
+            </div>
+          </div>
+          <button class="btn" id="generateTicketBtn">Generate Ticket</button>
+        </div>
+    
+        <!-- Ticket Section -->
+        <div class="ticket-section" id="ticketSection" style="display: none;">
+          <div class="ticket" id="ticketContainer">
+            <div class="ticket-header">
+              <h2>Digital Bus Ticket</h2>
+              <p>Free Booking • No Payment Required</p>
+            </div>
+            <div class="ticket-details">
+              <div class="detail-item">
+                <span>Passenger:</span>
+                <strong id="ticket-name"></strong>
+              </div>
+              <div class="detail-item">
+                <span>Student ID:</span>
+                <strong id="ticket-studentId"></strong>
+              </div>
+              <div class="detail-item">
+                <span>Branch:</span>
+                <strong id="ticket-branch"></strong>
+              </div>
+              <div class="detail-item">
+                <span>Route:</span>
+                <strong id="ticket-route"></strong>
+              </div>
+              <div class="detail-item">
+                <span>Date:</span>
+                <strong id="ticket-date"></strong>
+              </div>
+            </div>
+            <div class="qr-container">
+              <h4>Verification QR</h4>
+              <div class="qr-code">
+                <img id="qr-code" alt="QR Code" crossOrigin="anonymous">
+              </div>
+              
+            </div>
+            <p class="notice">Show this QR to the bus conductor</p>
+            <!-- Display the generated booking ID -->
+            <p id="ticket-bookingId"></p>
+          </div>
+          <button class="btn" id="downloadBtn">Download Ticket as JPEG</button>
+          <button class="btn back-btn" id="backBtn">New Booking</button>
+        </div>
+      </div>
+      
+       <!-- GSAP Animation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

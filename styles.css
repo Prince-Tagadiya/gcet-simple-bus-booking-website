@@ -1,0 +1,200 @@
+:root {
+  --primary: #4f46e5;
+  --secondary: #6366f1;
+  --surface: #ffffff;
+  --background: #f8fafc;
+  --text: #1e293b;
+  --border: #e2e8f0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+body {
+  background: var(--background);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.container {
+  background: var(--surface);
+  max-width: 480px;
+  width: 100%;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  overflow: hidden;
+  margin: 1rem;
+}
+/* Logo Bar */
+.logo-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--surface);
+}
+.logo-bar img {
+  max-height: 50px;
+}
+.header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 1.5rem 2rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.header h1 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+.form-section, .ticket-section {
+  padding: 2rem;
+}
+.input-group {
+  margin-bottom: 1.5rem;
+}
+label {
+  display: block;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+input[type="text"], select {
+  width: 100%;
+  padding: 0.875rem;
+  border: 2px solid var(--border);
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: var(--surface);
+}
+input[type="text"]:focus, select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79,70,229,0.1);
+}
+.route-selector {
+  border: 2px solid var(--border);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+/* Wrap route option in label for clickable selection */
+.route-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.route-option:not(:last-child) {
+  border-bottom: 1px solid var(--border);
+}
+.route-option:hover {
+  background: #f8fafc;
+}
+.route-option label {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.route-option input[type="radio"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid var(--border);
+  border-radius: 50%;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.route-option input[type="radio"]:checked {
+  border-color: var(--primary);
+  background: var(--primary);
+}
+.btn {
+  width: 100%;
+  padding: 1rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+  display: block;
+  margin-top: 1rem;
+}
+.btn:hover {
+  background: var(--secondary);
+  transform: translateY(-2px);
+}
+.ticket {
+  background: var(--surface);
+  border: 2px dashed var(--primary);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+.ticket-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.ticket-header h2 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+.ticket-details {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+.qr-container {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--surface);
+  border-radius: 0.75rem;
+  margin: 1.5rem 0;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+.qr-code {
+  /* width: 160px;
+  height: 160px; */
+  display: block;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+}
+.notice {
+  color: var(--text);
+  font-size: 0.875rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+/* Booking ID below QR code */
+#ticket-bookingId {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.back-btn { margin-top: 1rem; display: block; }
+@media (max-width: 480px) {
+  .container { max-width: 100%; border-radius: 0; }
+}
