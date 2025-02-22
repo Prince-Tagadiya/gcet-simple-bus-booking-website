@@ -27,8 +27,11 @@ A simple and efficient bus ticket booking system for GCET students. It allows us
 <img width="1822" alt="Screenshot 2025-02-22 at 17 04 00" src="https://github.com/user-attachments/assets/b7e596cc-11a6-42b7-acb5-3c1da49f8ee9" />
 
 **Downloaded Ticket**
+
 <img width="593" alt="Screenshot 2025-02-22 at 17 04 26" src="https://github.com/user-attachments/assets/e32acca2-0222-4c1e-b9eb-0cf87da55a03" />
 
+# 🚀 Live Preview 
+[🔗 GCET Bus Booking System](https://prince-tagadiya.github.io/gcet-simple-bus-booking-website/) 🎟️🎫
 ----------------------------------------  
 
 ## 🚀 How to Use  
